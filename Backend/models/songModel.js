@@ -1,7 +1,7 @@
 const { default: mongoose } = require("mongoose");
 const mongoDB = require("mongoose");
 
-// creating user mongoose schema
+// creating song mongoose schema
 
 const songSchema  = new mongoose.Schema({
     name: {
