@@ -1,9 +1,17 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const mongoose = require("mongoose");
+const auth = require("./routes/auth");
 
 const app = express();
 const PORT = process.env.PORT || 9000
+
+// therd party middlewares
+app.use(express.json())
+
+// application middlewares
+app.use("/api/user", auth)
+
 
 // mongoDB atlas connecting 
 
